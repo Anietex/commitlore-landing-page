@@ -67,6 +67,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+  },
   manifest: '/site.webmanifest',
   alternates: {
     canonical: 'https://commitlore.com',
