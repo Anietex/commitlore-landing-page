@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: 'CommitLore',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.jpeg',
         width: 1200,
         height: 630,
         alt: 'CommitLore - Your code tells a story. Let the world hear it.',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: 'CommitLore - Your Code Tells a Story',
     description: 'Your code tells a story. Let the world hear it. Transform your GitHub commits into compelling content. Build your reputation while you build your product.',
     creator: '@commitlore',
-    images: ['/og-image.png'],
+    images: ['/og-image.jpeg'],
   },
   robots: {
     index: true,
