@@ -63,7 +63,7 @@ export default function Terms() {
               <ul className="list-disc pl-6 text-[#3A2F2A] space-y-2 mb-4">
                 <li>Integration with GitHub repositories</li>
                 <li>AI-powered content generation from commits</li>
-                <li>Content management and scheduling tools</li>
+                <li>Content management and draft review tools</li>
                 <li>Publishing to various platforms (LinkedIn, Twitter, etc.)</li>
               </ul>
             </section>
@@ -311,7 +311,7 @@ export default function Terms() {
       {/* Footer */}
       <footer className="py-8 px-4 sm:px-6 md:px-8 bg-[#FAF8F3] border-t-2 border-[#1A1614]/10">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="text-sm text-[#3A2F2A] font-medium">© 2024 CommitLore. Build in Public Automatically.</span>
+          <span className="text-sm text-[#3A2F2A] font-medium">© 2024 CommitLore. Build in Public Effortlessly.</span>
         </div>
       </footer>
     </div>
