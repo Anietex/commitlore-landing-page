@@ -1342,9 +1342,9 @@ export default function LandingPageClient() {
                 )
               },
               {
-                title: "True Autopilot",
-                subtitle: "Post consistently without lifting a finger",
-                desc: "You've tried posting before. It lasted a week. CommitLore doesn't just generate content. It posts for you. Your commits trigger posts. You stay visible without opening a single app.",
+                title: "Effortless Content",
+                subtitle: "Stay consistent without the grind",
+                desc: "You've tried posting before. It lasted a week. CommitLore removes the friction. Add a command to your commit, review the draft, hit publish. Stay visible without the mental overhead.",
                 icon: (
                   <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
@@ -1411,10 +1411,10 @@ export default function LandingPageClient() {
           >
             {[
               { title: "Smart Commit Analysis", desc: "Not just your commit message. We analyze the diff, the files changed, and the context to generate meaningful content." },
-              { title: "Auto-Post to All Platforms", desc: "Connect Twitter/X, LinkedIn, and your blog. We post directly to your accounts on your schedule: daily, weekly, or instant." },
+              { title: "Multi-Platform Publishing", desc: "Connect Twitter/X, LinkedIn, and your blog. Review your draft once, then publish to all platforms with a single click." },
               { title: "Your Voice, Not Ours", desc: "Set your tone. Professional? Casual? Technical deep-dives? Indie hacker vibes? We match your style." },
-              { title: "Weekly Digests", desc: "Get a summary of your coding week, automatically posted every Sunday. Build in public on true autopilot." },
-              { title: "Review Before Posting", desc: "Want to approve posts first? Turn on review mode. Prefer full autopilot? Let it run." },
+              { title: "Weekly Digests", desc: "Get a summary of your coding week delivered to your drafts every Sunday. Review and share your wins with one click." },
+              { title: "Always in Control", desc: "Every draft waits for your approval. Edit, regenerate, or publish—nothing goes out without your say." },
               { title: "Engagement Dashboard", desc: "See what's been posted, track likes and comments, and learn what content resonates with your audience." }
             ].map((item, i) => (
               <motion.div
@@ -1470,7 +1470,7 @@ export default function LandingPageClient() {
                 desc: "For developers building in public",
                 price: "$15",
                 period: "/month",
-                features: ["Unlimited repositories", "Unlimited posts", "Auto-posting to Twitter/X & LinkedIn", "All content formats (Twitter, LinkedIn, Blog, Devlog)", "Custom tone & voice settings", "Weekly digest auto-posts", "Engagement dashboard", "Priority support"],
+                features: ["Unlimited repositories", "Unlimited posts", "Publish to Twitter/X & LinkedIn", "All content formats (Twitter, LinkedIn, Blog, Devlog)", "Custom tone & voice settings", "Weekly digest summaries", "Engagement dashboard", "Priority support"],
                 cta: "Start Pro",
                 popular: true
               }
@@ -1654,12 +1654,12 @@ export default function LandingPageClient() {
                 answer: "We analyze the actual code changes, not just your messages. Even \"fixed stuff\" becomes meaningful content when we see you refactored 200 lines of auth logic."
               },
               {
-                question: "I don't have time to review drafts",
-                answer: "You don't have to. Posts go out automatically. Most users set it and forget it."
+                question: "How much time does reviewing drafts take?",
+                answer: "Most drafts take 10 seconds to approve. The AI nails your voice, so you're usually just hitting publish. Quick edits when needed."
               },
               {
-                question: "What if it posts something I don't like?",
-                answer: "You're in control. Turn on approval mode to review every post before it goes live. Or set guardrails for what repos and content types get auto-posted."
+                question: "What if I don't like a draft?",
+                answer: "Regenerate it with one click, edit it yourself, or just skip it. Nothing posts without your approval."
               },
               {
                 question: "I'm not building anything interesting",
@@ -1869,7 +1869,7 @@ export default function LandingPageClient() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t-2 border-[#1A1614]/10 text-center">
-            <span className="text-sm text-[#3A2F2A] font-medium">© 2024 CommitLore. Build in Public Automatically.</span>
+            <span className="text-sm text-[#3A2F2A] font-medium">© 2024 CommitLore. Build in Public Effortlessly.</span>
           </div>
         </div>
       </footer>
