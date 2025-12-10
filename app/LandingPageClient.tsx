@@ -231,7 +231,7 @@ function CommitToDraftDemo() {
           transition={{ duration: 2, repeat: Infinity }}
           className="px-3 py-1 text-xs font-bold bg-white text-[#1A1614] rounded"
         >
-          Auto
+          Live
         </motion.div>
       </div>
 
@@ -518,7 +518,7 @@ function LiveDemoPreview() {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/70 max-w-3xl leading-relaxed font-medium"
             >
-              Commits flow in. Drafts flow out. Automatically.
+              Commits flow in. Drafts flow out. You stay in control.
             </motion.p>
           </motion.div>
         </div>
@@ -966,7 +966,7 @@ export default function LandingPageClient() {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="text-base sm:text-lg md:text-xl text-[#1A1614]/70 leading-relaxed mb-8 sm:mb-10 md:mb-12 max-w-2xl"
             >
-              CommitLore transforms your GitHub commits into compelling content and posts it directly to Twitter, LinkedIn, and your blog. Build your reputation while you build your product.
+              CommitLore transforms your GitHub commits into ready-to-share content for Twitter, LinkedIn, and your blog. Review, refine, and publish on your terms.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1126,7 +1126,7 @@ export default function LandingPageClient() {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed"
             >
-              CommitLore watches your GitHub activity, turns it into ready-to-post content, and publishes it for you automatically.
+              Add a CommitLore command to your commit message, and we'll craft a draft for you. Review it, tweak it, publish it—on your schedule.
             </motion.p>
           </div>
 
@@ -1138,7 +1138,7 @@ export default function LandingPageClient() {
               },
               {
                 example: "That performance fix that cut load time by 40%?",
-                result: "It's a Twitter thread about optimization techniques. Posted while you sleep."
+                result: "It's a Twitter thread about optimization techniques. Ready when you are."
               },
               {
                 example: "That side project you've been quietly building?",
@@ -1249,13 +1249,13 @@ export default function LandingPageClient() {
               },
               {
                 num: "02",
-                title: "We craft and post your story",
-                desc: "Our AI analyzes your commits, generates content that sounds like you, and posts it on your schedule. Or instantly."
+                title: "Trigger drafts with a command",
+                desc: "Add a simple command to your commit message. Our AI analyzes your work and generates content that sounds like you, ready for review."
               },
               {
                 num: "03",
-                title: "Watch your visibility grow",
-                desc: "Check your dashboard to see what's been posted, track engagement, and tweak your voice settings anytime."
+                title: "Review, refine, and publish",
+                desc: "Approve drafts from your dashboard, tweak the tone, and publish when you're happy. You're always in control."
               }
             ].map((item, i) => (
               <motion.div
