@@ -1453,32 +1453,44 @@ export default function LandingPageClient() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+            className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto"
           >
             {[
               {
-                name: "Free",
-                desc: "Perfect for trying it out",
-                price: "$0",
+                name: "Starter",
+                desc: "Perfect for individual developers",
+                price: "$12",
                 period: "/month",
-                features: ["1 repository", "5 drafts per month", "Manual copy/paste only", "Twitter & LinkedIn formats"],
-                cta: "Start Free",
-                popular: false
+                features: ["3 repositories", "5 drafts per day", "Twitter & LinkedIn", "14-day free trial"],
+                cta: "Start Free Trial",
+                popular: false,
+                comingSoon: false
               },
               {
                 name: "Pro",
-                desc: "For developers building in public",
-                price: "$15",
+                desc: "For serious developers and teams",
+                price: "$29",
                 period: "/month",
-                features: ["Unlimited repositories", "Unlimited posts", "Publish to Twitter/X & LinkedIn", "All content formats (Twitter, LinkedIn, Blog, Devlog)", "Custom tone & voice settings", "Weekly digest summaries", "Engagement dashboard", "Priority support"],
-                cta: "Start Pro",
-                popular: true
+                features: ["10 repositories", "15 drafts per day", "All platforms (Twitter, LinkedIn, Dev.to, WordPress)", "Priority support"],
+                cta: "Get Pro",
+                popular: true,
+                comingSoon: false
+              },
+              {
+                name: "Team",
+                desc: "For growing teams",
+                price: "$49",
+                period: "/month",
+                features: ["Unlimited repositories", "Unlimited drafts", "All platforms", "Team collaboration", "Priority support"],
+                cta: "Coming Soon",
+                popular: false,
+                comingSoon: true
               }
             ].map((plan, i) => (
               <motion.div
                 key={i}
                 variants={fadeInUp}
-                whileHover={{ y: -3 }}
+                whileHover={plan.comingSoon ? {} : { y: -3 }}
                 animate={plan.popular ? {
                   boxShadow: [
                     "0 0 0 0 rgba(180, 83, 9, 0.08)",
@@ -1490,10 +1502,13 @@ export default function LandingPageClient() {
                   boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" },
                   y: { duration: 0.3 }
                 } : { duration: 0.3 }}
-                className={`bg-white rounded-xl p-8 shadow-sm relative ${plan.popular ? 'border-2 border-[#B45309] shadow-lg' : 'border border-[#EDE9D5]'}`}
+                className={`bg-white rounded-xl p-8 shadow-sm relative ${plan.popular ? 'border-2 border-[#B45309] shadow-lg' : 'border border-[#EDE9D5]'} ${plan.comingSoon ? 'opacity-70' : ''}`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#B45309] text-white text-xs font-semibold rounded-full">Recommended</div>
+                )}
+                {plan.comingSoon && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#3A2F2A] text-white text-xs font-semibold rounded-full">Coming Soon</div>
                 )}
                 <div className="mb-6">
                   <h3 className="font-space text-xl font-bold text-[#1A1614] mb-2">{plan.name}</h3>
@@ -1511,14 +1526,20 @@ export default function LandingPageClient() {
                     </li>
                   ))}
                 </ul>
-                <motion.a
-                  href="#"
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`block w-full px-6 py-3 text-center text-base font-semibold rounded-lg ${plan.popular ? 'bg-[#B45309] text-white hover:bg-[#B45309]/90 shadow-sm' : 'text-[#3A2F2A] hover:text-[#1A1614] border border-[#EDE9D5]'}`}
-                >
-                  {plan.cta}
-                </motion.a>
+                {plan.comingSoon ? (
+                  <div className="block w-full px-6 py-3 text-center text-base font-semibold rounded-lg bg-[#EDE9D5] text-[#3A2F2A] cursor-not-allowed">
+                    {plan.cta}
+                  </div>
+                ) : (
+                  <motion.a
+                    href="#"
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`block w-full px-6 py-3 text-center text-base font-semibold rounded-lg ${plan.popular ? 'bg-[#B45309] text-white hover:bg-[#B45309]/90 shadow-sm' : 'text-[#3A2F2A] hover:text-[#1A1614] border border-[#EDE9D5]'}`}
+                  >
+                    {plan.cta}
+                  </motion.a>
+                )}
               </motion.div>
             ))}
           </motion.div>
@@ -1863,7 +1884,7 @@ export default function LandingPageClient() {
             </motion.div>
             <div className="flex items-center gap-6 text-sm">
               <a href="#pricing" className="text-[#3A2F2A] hover:text-[#1A1614] transition-colors font-medium">Pricing</a>
-              <a href="#" className="text-[#3A2F2A] hover:text-[#1A1614] transition-colors font-medium">Docs</a>
+              <Link href="/docs" className="text-[#3A2F2A] hover:text-[#1A1614] transition-colors font-medium">Docs</Link>
               <Link href="/privacy" className="text-[#3A2F2A] hover:text-[#1A1614] transition-colors font-medium">Privacy</Link>
               <Link href="/terms" className="text-[#3A2F2A] hover:text-[#1A1614] transition-colors font-medium">Terms</Link>
             </div>
