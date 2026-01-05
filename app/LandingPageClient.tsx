@@ -378,10 +378,10 @@ function UIScreenshots() {
   const y4 = useTransform(scrollYProgress, [0, 1], [0, -35]);
 
   const screenshots = [
-    { title: "Dashboard", desc: "Track all repos and drafts at a glance", y: y1 },
-    { title: "Draft List", desc: "Filter by repo, platform, or status", y: y2 },
-    { title: "Editor View", desc: "Edit, regenerate, and publish instantly", y: y3 },
-    { title: "Repo Selection", desc: "Control which repos generate content", y: y4 }
+    { title: "Dashboard", desc: "Track all repos and drafts at a glance", y: y1, image: "/dashboard.png" },
+    { title: "Draft List", desc: "Filter by repo, platform, or status", y: y2, image: "/draft.png" },
+    { title: "Editor View", desc: "Edit, regenerate, and publish instantly", y: y3, image: "/edit-draft.png" },
+    { title: "Repo Selection", desc: "Control which repos generate content", y: y4, image: "/repo-connect.png" }
   ];
 
   return (
@@ -404,26 +404,21 @@ function UIScreenshots() {
               transition={{ duration: 0.3 }}
               className="bg-[#FAF8F3] rounded-xl border border-[#EDE9D5] shadow-lg overflow-hidden"
             >
-              <div className="aspect-[16/10] bg-white border-b border-[#EDE9D5] p-6 flex flex-col">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-2 h-2 rounded-full bg-red-400"></div>
-                  <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
-                  <div className="w-2 h-2 rounded-full bg-green-400"></div>
-                </div>
-                <div className="flex-1 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-[#FFEFE6] flex items-center justify-center">
-                      <svg className="w-8 h-8 text-[#B45309]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                        <path d="M9 9h6M9 13h6M9 17h3"></path>
-                      </svg>
-                    </div>
-                    <p className="font-space text-sm font-bold text-[#1A1614]">{screen.title}</p>
-                  </div>
-                </div>
+              <div className="bg-[#F5F5F5] border-b border-[#E0E0E0] px-3 py-2 flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-[#FF5F57]"></div>
+                <div className="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
+                <div className="w-3 h-3 rounded-full bg-[#28C840]"></div>
+                <span className="ml-2 text-xs text-[#1A1614]/50 font-medium">{screen.title}</span>
+              </div>
+              <div className="overflow-hidden">
+                <img
+                  src={screen.image}
+                  alt={screen.title}
+                  className="w-full h-auto object-cover"
+                />
               </div>
               <div className="p-4 bg-[#FAF8F3]">
-                <p className="text-sm text-[#3A2F2A] text-center">{screen.desc}</p>
+                <p className="text-sm text-[#3A2F2A] text-center font-medium">{screen.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -866,7 +861,7 @@ export default function LandingPageClient() {
           </nav>
           <div className="hidden md:flex items-center gap-3">
             <MagneticButton
-              href="#pricing"
+              href="https://app.commitlore.com/"
               className="px-4 py-2 text-sm font-bold bg-[#1A1614] text-white rounded-lg hover:bg-[#1A1614]/90 transition-colors"
             >
               Get Started
@@ -923,7 +918,7 @@ export default function LandingPageClient() {
                 </a>
                 <div className="pt-2">
                   <a
-                    href="#pricing"
+                    href="https://app.commitlore.com/"
                     onClick={handleMobileNavClick}
                     className="block px-4 py-3 text-base font-bold bg-[#1A1614] text-white rounded-lg text-center hover:bg-[#1A1614]/90 transition-colors"
                   >
@@ -1532,7 +1527,7 @@ export default function LandingPageClient() {
                   </div>
                 ) : (
                   <motion.a
-                    href="#"
+                    href="https://app.commitlore.com/"
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.95 }}
                     className={`block w-full px-6 py-3 text-center text-base font-semibold rounded-lg ${plan.popular ? 'bg-[#B45309] text-white hover:bg-[#B45309]/90 shadow-sm' : 'text-[#3A2F2A] hover:text-[#1A1614] border border-[#EDE9D5]'}`}
@@ -1572,7 +1567,7 @@ export default function LandingPageClient() {
               </div>
             </div>
             <p className="mt-8 text-sm text-[#3A2F2A]">
-              Need custom features or on-premise deployment? <a href="#" className="text-[#B45309] font-semibold hover:underline">Contact sales</a> for Enterprise pricing.
+              Need custom features or on-premise deployment? <a href="mailto:sales@commitlore.com" className="text-[#B45309] font-semibold hover:underline">Contact sales</a> for Enterprise pricing.
             </p>
           </motion.div>
         </div>
@@ -1738,7 +1733,7 @@ export default function LandingPageClient() {
                 className="space-y-4"
               >
                 <MagneticButton
-                  href="#pricing"
+                  href="https://app.commitlore.com/"
                   className="inline-block px-10 py-5 text-xl font-semibold bg-[#B45309] text-white rounded-2xl hover:bg-[#B45309]/90"
                 >
                   Start Telling Your Story
